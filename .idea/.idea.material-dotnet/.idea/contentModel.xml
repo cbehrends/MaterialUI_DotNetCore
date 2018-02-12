@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/Library/Caches/Rider2017.2/resharper-host/local/Transient/ReSharperHost/v10/SolutionCaches/_material-dotnet.-2075156497.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_material-dotnet.-825393108.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
@@ -22,7 +22,6 @@
         <e p="dist" t="Include">
           <e p="89889688147bd7575d6327160d64e760.svg" t="Include" />
           <e p="main-server.js" t="Include" />
-          <e p="vendor-manifest.json" t="Include" />
           <e p="vendor.js" t="Include" />
         </e>
         <e p="routes.tsx" t="Include" />
@@ -49,6 +48,7 @@
       <e p="package.json" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
+      <e p="README.md" t="Include" />
       <e p="Startup.cs" t="Include" />
       <e p="tsconfig.json" t="Include" />
       <e p="Views" t="Include">

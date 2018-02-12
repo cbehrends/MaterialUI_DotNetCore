@@ -68,13 +68,13 @@ class Layout extends React.Component<{},{}> {
 
                 <AppBar position="static">
                     <Toolbar>
-                        <IconButton className={classes.menuButton} color="contrast" aria-label="Menu">
+                        <IconButton className={classes.menuButton} aria-label="Menu">
                             <MenuIcon />
                         </IconButton>
-                        <Typography type="title" color="inherit"  className={classes.flex}>
+                        <Typography className={classes.flex}>
                             Title
                         </Typography>
-                        <Button color="contrast">Login</Button>
+                        <Button>Login</Button>
                     </Toolbar>
                 </AppBar>
                 
