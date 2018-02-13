@@ -8,12 +8,9 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
-
-import { NavMenu } from './NavMenu';
-import {WithStyles} from "material-ui";
 import {AnyAction, compose} from "redux";
 import {connect} from "react-redux";
-import {ApplicationState} from "../store/index";
+import {ApplicationState} from "../reducers/index";
 import {RouteComponentProps} from "react-router";
 
 const theme = createMuiTheme({
@@ -21,8 +18,6 @@ const theme = createMuiTheme({
         //type: 'dark', // Switching the dark mode on is a single property value change.
     },
 });
-
-
 
 interface ILayoutProps {
     classes: any,
@@ -68,17 +63,20 @@ class Layout extends React.Component<{},{}> {
 
                 <AppBar position="static">
                     <Toolbar>
-                        <IconButton className={classes.menuButton} aria-label="Menu">
+                        <IconButton className={classes.menuButton} color='inherit' aria-label="Menu">
                             <MenuIcon />
                         </IconButton>
-                        <Typography className={classes.flex}>
+                        <Typography className={classes.flex} color='inherit'>
                             Title
                         </Typography>
-                        <Button>Login</Button>
+                        <Button color='inherit'>Login</Button>
                     </Toolbar>
+                    
                 </AppBar>
                 
                 { this.props.children }
+                
+                
             </div>
         </MuiThemeProvider>);
        

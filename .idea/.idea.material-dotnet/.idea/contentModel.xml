@@ -11,7 +11,9 @@
         <e p="boot-client.tsx" t="Include" />
         <e p="boot-server.tsx" t="Include" />
         <e p="components" t="Include">
-          <e p="Home.tsx" t="Include" />
+          <e p="Home" t="Include">
+            <e p="Home.tsx" t="Include" />
+          </e>
           <e p="Layout.tsx" t="Include" />
           <e p="NavMenu.tsx" t="Include" />
         </e>
@@ -24,12 +26,12 @@
           <e p="main-server.js" t="Include" />
           <e p="vendor.js" t="Include" />
         </e>
-        <e p="routes.tsx" t="Include" />
-        <e p="store" t="Include">
+        <e p="reducers" t="Include">
           <e p="Counter.ts" t="Include" />
           <e p="index.ts" t="Include" />
           <e p="WeatherForecasts.ts" t="Include" />
         </e>
+        <e p="routes.tsx" t="Include" />
       </e>
       <e p="Controllers" t="Include">
         <e p="HomeController.cs" t="Include" />

@@ -6,7 +6,6 @@ export default class Home extends React.Component<RouteComponentProps<{}>, {}> {
     public render() {
         return <Paper>
             <h1>Hello, world!</h1>
-          
-        </Paper>;
+        </Paper>
     }
 }

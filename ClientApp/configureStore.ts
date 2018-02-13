@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware, compose, combineReducers, GenericStoreEnhancer, Store, StoreEnhancerStoreCreator, ReducersMapObject } from 'redux';
 import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
-import * as StoreModule from './store';
-import { ApplicationState, reducers } from './store';
+import * as StoreModule from './reducers';
+import { ApplicationState, reducers } from './reducers';
 import { History } from 'history';
 
 export default function configureStore(history: History, initialState?: ApplicationState) {
@@ -21,8 +21,8 @@ export default function configureStore(history: History, initialState?: Applicat
 
     // Enable Webpack hot module replacement for reducers
     if (module.hot) {
-        module.hot.accept('./store', () => {
-            const nextRootReducer = require<typeof StoreModule>('./store');
+        module.hot.accept('./reducers', () => {
+            const nextRootReducer = require<typeof StoreModule>('./reducers');
             store.replaceReducer(buildRootReducer(nextRootReducer.reducers));
         });
     }

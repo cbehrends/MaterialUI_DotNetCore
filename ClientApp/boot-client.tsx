@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
 import configureStore from './configureStore';
-import { ApplicationState }  from './store';
+import { ApplicationState }  from './reducers';
 import * as RoutesModule from './routes';
 let routes = RoutesModule.routes;
 
