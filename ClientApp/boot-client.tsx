@@ -1,5 +1,4 @@
 import './css/site.css';
-import 'bootstrap';
 import 'material-ui';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

@@ -42,37 +42,37 @@
       }
     },
     "@types/react-redux": {
-      "version": "5.0.11",
-      "resolved": "https://registry.npmjs.org/@types/react-redux/-/react-redux-5.0.11.tgz",
-      "integrity": "sha512-onugzQGhohicl5dOBF4yeU+2uqBSL7hEyTEOd71t/QawpvaAFRv4ML1jhqaxSGnnLVG8BudmoKdsj7UVYnsP5w==",
+      "version": "4.4.45",
+      "resolved": "https://registry.npmjs.org/@types/react-redux/-/react-redux-4.4.45.tgz",
+      "integrity": "sha512-bPM6BJucVy9Y0JCf9PCEC5zwmqnTx9+YGILNVwhGmIrkVrOXoJaEuVurncTH7llV+bxjlZVcW/RLxQtDvAHcQw==",
       "requires": {
         "@types/react": "16.0.36",
         "redux": "3.7.2"
       }
     },
     "@types/react-router": {
-      "version": "4.0.21",
-      "resolved": "https://registry.npmjs.org/@types/react-router/-/react-router-4.0.21.tgz",
-      "integrity": "sha512-JxMAzk8cWt4v093Wjw/Fiz4wcqx1MhhLLPy01C7E7cR1h0COkEiAvmqMo7/fZy8qIPZ9VmpcaHMIkQywv8rFXg==",
+      "version": "4.0.12",
+      "resolved": "https://registry.npmjs.org/@types/react-router/-/react-router-4.0.12.tgz",
+      "integrity": "sha512-vlZXTicPMGn6nqiCTfK3Qg6ix0CFHClBSQgwWvtvmlwqildfPfBpY9aPQEki/w/rrMLzAApaAUaXzt5/W+1CKQ==",
       "requires": {
         "@types/history": "4.6.1",
         "@types/react": "16.0.36"
       }
     },
     "@types/react-router-dom": {
-      "version": "4.2.3",
-      "resolved": "https://registry.npmjs.org/@types/react-router-dom/-/react-router-dom-4.2.3.tgz",
-      "integrity": "sha512-q11w7Hw3mM/5C6wwKjres3476IKA7wDbpEjsSl1FsAJ8I5K7zlZmt1NAOvbKBZT4cJ4GQEZPIJWaelsLWd/muw==",
+      "version": "4.0.5",
+      "resolved": "https://registry.npmjs.org/@types/react-router-dom/-/react-router-dom-4.0.5.tgz",
+      "integrity": "sha512-0AHAokPyW7L7M+brcaMTnFewce0tCaqG+C4KtUyizlk5tBToBEZ/bpjMDL5hbQ96Nc/wl5Ri8DJBijUmf82fdQ==",
       "requires": {
         "@types/history": "4.6.1",
         "@types/react": "16.0.36",
-        "@types/react-router": "4.0.21"
+        "@types/react-router": "4.0.12"
       }
     },
     "@types/react-router-redux": {
-      "version": "5.0.11",
-      "resolved": "https://registry.npmjs.org/@types/react-router-redux/-/react-router-redux-5.0.11.tgz",
-      "integrity": "sha512-mESUtQrcDfY2XGqVh1f/Xl5zIyG0ynizBEvijCHbznVv8gXbG4MGSiWT4RGeq9EAKbPzmzuskr5K6d6wYulZKg==",
+      "version": "5.0.3",
+      "resolved": "https://registry.npmjs.org/@types/react-router-redux/-/react-router-redux-5.0.3.tgz",
+      "integrity": "sha512-o82LOP4Ka4IgoJmzzABBD9jq8Qh6PuEEgfAmSQU6ZgYS8Tv/U5byKU3WHbB9dwXE+jgcL9rtWZsOoBY0asK0hw==",
       "requires": {
         "@types/history": "4.6.1",
         "@types/react": "16.0.36",
@@ -456,11 +456,6 @@
       "version": "4.11.8",
       "resolved": "https://registry.npmjs.org/bn.js/-/bn.js-4.11.8.tgz",
       "integrity": "sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA=="
-    },
-    "bootstrap": {
-      "version": "3.3.7",
-      "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.7.tgz",
-      "integrity": "sha1-WjiTlFSfIzMIdaOxUGVldPip63E="
     },
     "brace-expansion": {
       "version": "1.1.8",
@@ -2737,11 +2732,6 @@
         "node-fetch": "1.7.1",
         "whatwg-fetch": "2.0.3"
       }
-    },
-    "jquery": {
-      "version": "3.2.1",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.2.1.tgz",
-      "integrity": "sha1-XE2d5lKvbNCncBVKYxu6ErAVx4c="
     },
     "js-base64": {
       "version": "2.3.2",

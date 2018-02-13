@@ -84,4 +84,6 @@ class Layout extends React.Component<{},{}> {
     }
 }
 
-export default compose(withStyles(styles, {}),connect(),)(Layout) as typeof Layout;
+export default compose(
+    withStyles(styles, {})
+    ,connect(),)(Layout) as typeof Layout;
