@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {MuiThemeProvider, createMuiTheme, StyleRulesCallback} from 'material-ui/styles';
-
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
