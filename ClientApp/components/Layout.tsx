@@ -10,7 +10,9 @@ import MenuIcon from 'material-ui-icons/Menu';
 import {AnyAction, compose} from "redux";
 import {connect} from "react-redux";
 import {RouteComponentProps} from "react-router";
-import {ApplicationState} from "../reducers/index";
+import {withRouter} from 'react-router';
+import {ApplicationState} from "../reducers/";
+import * as CounterStore from "../reducers/Counter";
 
 
 const theme = createMuiTheme({
@@ -47,10 +49,10 @@ const styles: StyleRulesCallback<ClassNames> = theme => ({
     
 });
 
-type LayoutProps = RouteComponentProps<{}>;
+type LayoutProps = ILayoutProps & RouteComponentProps<{}>;
 
 
-class Layout extends React.Component<{},{}> {
+class Layout extends React.Component<LayoutProps,{}> {
     
     public render() {
         
@@ -84,6 +86,7 @@ class Layout extends React.Component<{},{}> {
     }
 }
 
-export default compose(
-    withStyles(styles, {})
-    ,connect(),)(Layout) as typeof Layout;
+//export default Layout;
+//export default compose(withStyles(styles, {}),)(Layout) as typeof Layout;
+//export default withStyles(styles, {})(Layout) as typeof Layout;
+export default withStyles(styles)<{}>(Layout);
