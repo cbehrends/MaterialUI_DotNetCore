@@ -9,8 +9,9 @@ import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import {AnyAction, compose} from "redux";
 import {connect} from "react-redux";
-import {ApplicationState} from "../reducers/index";
 import {RouteComponentProps} from "react-router";
+import {ApplicationState} from "../reducers/index";
+
 
 const theme = createMuiTheme({
     palette: {
