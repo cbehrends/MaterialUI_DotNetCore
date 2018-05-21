@@ -35,10 +35,10 @@ const styles: StyleRulesCallback<ClassNames> = theme => ({
     
 });
 
-type LayoutProps = ILayoutProps;
+type LayoutProps = ILayoutProps & WithStyles<'root'>;
 
 
-class Layout extends React.Component<WithStyles<'root'> & LayoutProps,{}>{
+class Layout extends React.Component<LayoutProps,{}>{
     
     public render() {
        const {classes} = this.props as ILayoutProps;
@@ -61,4 +61,4 @@ class Layout extends React.Component<WithStyles<'root'> & LayoutProps,{}>{
     }
 }
 
-export default withRoot(withStyles(styles)<{}>(Layout)) as any;
+export default withRoot(withStyles(styles)<any>(Layout)) as any;

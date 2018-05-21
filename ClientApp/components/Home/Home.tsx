@@ -3,8 +3,33 @@ import Paper from '@material-ui/core/Paper';
 import { withRouter } from 'react-router';
 import {NavLink, RouteComponentProps} from 'react-router-dom';
 import withRoot from "../withRoot";
+import {withStyles} from "@material-ui/core/styles";
+import {StyleRulesCallback, WithStyles} from "@material-ui/core";
 
-class Home extends React.Component<RouteComponentProps<any>> {
+
+type ClassNames =
+    | 'root'
+    | 'flex'
+    | 'menuButton';
+
+const styles: StyleRulesCallback<ClassNames> = theme => ({
+    root: {
+        marginTop: theme.spacing.unit * 3,
+        width: '100%',
+    },
+    flex: {
+        flex: 1,
+    },
+    menuButton: {
+        marginLeft: -12,
+        marginRight: 20,
+    },
+
+});
+
+type HomeProps = WithStyles<'root'> & RouteComponentProps<any>;
+
+class Home extends React.Component<HomeProps> {
 
     public render() {
         return (
@@ -15,4 +40,4 @@ class Home extends React.Component<RouteComponentProps<any>> {
     }
 }
 
-export default withRoot(withRouter(Home)) as any;
+export default withRoot(withStyles(styles)<any>(Home)) as any;
