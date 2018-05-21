@@ -23,6 +23,7 @@ module.exports = (env) => {
                 'react',
                 'react-dom',
                 'react-router-dom',
+                '@material-ui',
                 'react-redux',
                 'redux',
                 'redux-thunk',

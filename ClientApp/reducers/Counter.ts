@@ -12,8 +12,8 @@ export interface CounterState {
 // They do not themselves have any side-effects; they just describe something that is going to happen.
 // Use @typeName and isActionType for type detection that works even after serialization/deserialization.
 
-interface IncrementCountAction { type: 'INCREMENT_COUNT' }
-interface DecrementCountAction { type: 'DECREMENT_COUNT' }
+export interface IncrementCountAction { type: 'INCREMENT_COUNT' }
+export interface DecrementCountAction { type: 'DECREMENT_COUNT' }
 
 // Declare a 'discriminated union' type. This guarantees that all references to 'type' properties contain one of the
 // declared type strings (and not any other arbitrary string).

@@ -1,17 +1,18 @@
 import * as React from 'react';
-import Paper from 'material-ui/Paper'; 
+import Paper from '@material-ui/core/Paper';
+import { withRouter } from 'react-router';
+import {NavLink, RouteComponentProps} from 'react-router-dom';
+import withRoot from "../withRoot";
 
-import { RouteComponentProps, NavLink } from 'react-router-dom';
+class Home extends React.Component<RouteComponentProps<any>> {
 
-export default class Home extends React.Component<RouteComponentProps<{}>, {}> {
-    
-    
-    
-    
     public render() {
-        return <Paper>
-            <h1>Hello, world!</h1>
-            <NavLink to={'/counter'}>Counter</NavLink>
-        </Paper>
+        return (
+            <Paper>
+                <h1>Hello, world!</h1>
+                <NavLink to={'/counter'}>Counter</NavLink>
+            </Paper>);
     }
 }
+
+export default withRoot(withRouter(Home)) as any;
