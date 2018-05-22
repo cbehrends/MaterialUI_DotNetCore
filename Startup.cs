@@ -36,7 +36,7 @@ namespace MaterialUI
                 app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
                 {
                     HotModuleReplacement = true,
-                    ReactHotModuleReplacement = true
+                    ReactHotModuleReplacement = false
                 });
             }
             else

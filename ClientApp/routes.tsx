@@ -10,6 +10,4 @@ import Counter from './components/Counter/Counter';
 export const routes = <Layout>
     <Route exact path='/' component={ Home }  />
     <Route exact path='/counter' component={ Counter } />
-    
-    
 </Layout>;

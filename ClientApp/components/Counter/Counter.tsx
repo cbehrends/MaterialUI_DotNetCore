@@ -9,7 +9,7 @@ type CounterProps =
     & typeof CounterStore.actionCreators
     & RouteComponentProps<{}>;
 
-class Counter extends React.Component<CounterProps, {}> {
+class Counter extends React.Component<CounterProps> {
     public render() {
         return <div>
             <h1>Counter</h1>
@@ -32,4 +32,4 @@ class Counter extends React.Component<CounterProps, {}> {
 export default connect(
     (state: ApplicationState) => state.counter, // Selects which state properties are merged into the component's props
     CounterStore.actionCreators                 // Selects which action creators are merged into the component's props
-)(Counter) as typeof Counter;
+)(Counter) as any;
