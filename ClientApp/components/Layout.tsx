@@ -7,14 +7,28 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import {WithStyles} from "@material-ui/core";
-import withRoot from "./withRoot";
+import {AnyAction, compose} from 'redux';
+import {connect} from "react-redux";
+import {RouteComponentProps} from 'react-router';
+import {withRouter} from 'react-router';
+import {ApplicationState} from "../reducers/";
+import * as CounterStore from "../reducers/Counter";
+
+
+const theme = createMuiTheme({
+    palette: {
+        //type: 'dark', // Switching the dark mode on is a single property value change.
+    },
+});
 
 interface ILayoutProps {
-    classes?: any,
-    children: Element,
-    
+    classes: any,
+    children: Element
 }
+
+
+const drawerWidth = 240;
+
 type ClassNames =
     | 'root'
     | 'flex'
@@ -35,16 +49,20 @@ const styles: StyleRulesCallback<ClassNames> = theme => ({
     
 });
 
-type LayoutProps = ILayoutProps & WithStyles<'root'>;
+type LayoutProps = ILayoutProps & RouteComponentProps<{}>;
 
 
-class Layout extends React.Component<LayoutProps,{}>{
+class Layout extends React.Component<LayoutProps,{}> {
     
     public render() {
-       const {classes} = this.props as ILayoutProps;
+        
+        const {classes} = this.props as ILayoutProps;
         
         return(
+        <MuiThemeProvider theme={theme}>
+            
             <div id="main">
+
                 <AppBar position="static">
                     <Toolbar>
                         <IconButton className={classes.menuButton} color='inherit' aria-label="Menu">
@@ -55,10 +73,20 @@ class Layout extends React.Component<LayoutProps,{}>{
                         </Typography>
                         <Button color='inherit'>Login</Button>
                     </Toolbar>
+                    
                 </AppBar>
+                
                 { this.props.children }
-            </div>);
+                
+                
+            </div>
+        </MuiThemeProvider>);
+       
+        
     }
 }
 
-export default withRoot(withStyles(styles)<any>(Layout)) as any;
+//export default Layout;
+//export default compose(withStyles(styles, {}),)(Layout) as typeof Layout;
+//export default withStyles(styles, {})(Layout) as typeof Layout;
+export default withStyles(styles)<{}>(Layout);
