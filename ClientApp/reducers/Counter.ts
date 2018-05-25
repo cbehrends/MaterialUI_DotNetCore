@@ -4,7 +4,8 @@ import { Action, Reducer } from 'redux';
 // STATE - This defines the type of data maintained in the Redux store.
 
 export interface CounterState {
-    count: number
+    count: number,
+    dialogOpen: boolean
 }
 
 // -----------------
@@ -14,10 +15,12 @@ export interface CounterState {
 
 export interface IncrementCountAction { type: 'INCREMENT_COUNT' }
 export interface DecrementCountAction { type: 'DECREMENT_COUNT' }
+export interface OpenDialogAction { type: 'OPEN_DIALOG' }
+export interface CloseDialogAction { type: 'CLOSE_DIALOG' }
 
 // Declare a 'discriminated union' type. This guarantees that all references to 'type' properties contain one of the
 // declared type strings (and not any other arbitrary string).
-type KnownAction = IncrementCountAction | DecrementCountAction;
+type KnownAction = IncrementCountAction | DecrementCountAction | OpenDialogAction | CloseDialogAction;
 
 // ----------------
 // ACTION CREATORS - These are functions exposed to UI components that will trigger a state transition.
@@ -25,7 +28,9 @@ type KnownAction = IncrementCountAction | DecrementCountAction;
 
 export const actionCreators = {
     increment: () => <IncrementCountAction>{ type: 'INCREMENT_COUNT' },
-    decrement: () => <DecrementCountAction>{ type: 'DECREMENT_COUNT' }
+    decrement: () => <DecrementCountAction>{ type: 'DECREMENT_COUNT' },
+    openDialog: () => <OpenDialogAction>{ type: 'OPEN_DIALOG' },
+    closeDialog: () => <CloseDialogAction>{ type: 'CLOSE_DIALOG' }
 };
 
 // ----------------
@@ -34,9 +39,13 @@ export const actionCreators = {
 export const reducer: Reducer<CounterState> = (state: CounterState, action: KnownAction) => {
     switch (action.type) {
         case 'INCREMENT_COUNT':
-            return { count: state.count + 1 };
+            return {...state, count: state.count + 1 };
         case 'DECREMENT_COUNT':
-            return { count: state.count - 1 };
+            return {...state, count: state.count - 1 };
+        case 'OPEN_DIALOG':
+            return {...state, dialogOpen: true };
+        case 'CLOSE_DIALOG':
+            return {...state, dialogOpen: false};    
         default:
             // The following line guarantees that every action in the KnownAction union has been covered by a case above
             const exhaustiveCheck: never = action;
@@ -44,5 +53,5 @@ export const reducer: Reducer<CounterState> = (state: CounterState, action: Know
 
     // For unrecognized actions (or in cases where actions have no effect), must return the existing state
     //  (or default initial state if none was supplied)
-    return state || { count: 0};
+    return state || { count: 0, dialogOpen: false};
 };
