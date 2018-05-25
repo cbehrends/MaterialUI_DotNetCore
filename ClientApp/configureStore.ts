@@ -1,4 +1,13 @@
-import { createStore, applyMiddleware, compose, combineReducers, GenericStoreEnhancer, Store, StoreEnhancerStoreCreator, ReducersMapObject } from 'redux';
+import {
+    createStore,
+    applyMiddleware,
+    compose,
+    combineReducers,
+    Store,
+    StoreEnhancerStoreCreator,
+    ReducersMapObject,
+    GenericStoreEnhancer
+} from 'redux';
 import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import * as StoreModule from './reducers';
@@ -17,7 +26,7 @@ export default function configureStore(history: History, initialState?: Applicat
     )(createStore);
 
     // Combine all reducers and instantiate the app-wide store instance
-    const allReducers = buildRootReducer(reducers);
+    const allReducers = buildRootReducer(StoreModule.reducers);
     const store = createStoreWithMiddleware(allReducers, initialState) as Store<ApplicationState>;
 
     // Enable Webpack hot module replacement for reducers
