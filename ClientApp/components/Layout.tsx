@@ -44,7 +44,7 @@ class Layout extends React.Component<LayoutProps,{}> {
         const {classes} = this.props as ILayoutProps;
         
         return(
-            <div id="main">
+            <div id="main" className={classes.root}>
 
                 <AppBar position="static">
                     <Toolbar>
