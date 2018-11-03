@@ -44,16 +44,16 @@ class Layout extends React.Component<LayoutProps,{}> {
         const {classes} = this.props as ILayoutProps;
         
         return(
-            <div id="main">
+            <div id="main" className={classes.root}>
 
                 <AppBar position="static">
                     <Toolbar>
                         <IconButton className={classes.menuButton} color='inherit' aria-label="Menu">
                             <MenuIcon />
                         </IconButton>
-                        <Typography className={classes.flex} color='inherit'>
-                            Title
-                        </Typography>
+                        {/*<Typography color='inherit'>*/}
+                            {/*Title*/}
+                        {/*</Typography>*/}
                         <Button color='inherit'>Login</Button>
                     </Toolbar>
                     
@@ -67,4 +67,4 @@ class Layout extends React.Component<LayoutProps,{}> {
     }
 }
 
-export default withRoot(withStyles(styles)<{}>(Layout)) as any;
+export default withRoot(withStyles(styles)(Layout)) as any;

@@ -11,12 +11,14 @@ namespace MaterialUI.Controllers
     {
         public IActionResult Index()
         {
+            // ReSharper disable once Mvc.ViewNotResolved
             return View();
         }
 
         public IActionResult Error()
         {
             ViewData["RequestId"] = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            // ReSharper disable once Mvc.ViewNotResolved
             return View();
         }
     }
