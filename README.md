@@ -1,5 +1,5 @@
 # MaterialUI & DotNetCore
-.Net Core 2.0 Material-UI 1.0.x Starter
+.Net Core 2.x Material-UI 3.0.x Starter
 
 This is a very simple starter package to get .Net Core & [MaterialUI](https://github.com/mui-org/material-ui) 1.x 
 working together.  Any input / pull requests are greatly appreaciatied as I'd like this repo to become a Best-Practice 
@@ -14,7 +14,7 @@ Installation:
 
 ### Includes
 
-+ Material UI 1.0
++ Material UI 3.0
 + TypeScript 2.8
 + React 16
 + Redux 
