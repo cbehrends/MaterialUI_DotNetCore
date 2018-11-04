@@ -24,5 +24,3 @@ Notes:
 
 + There is a lot of usage of 'any'.  This is only due to myself just now wrapping my head around TypeScript and not
 knowing the proper syntax to get all of type checking working properly.
-+ I don't suggest you to go down my route as it maybe not the best, I hope for some community support to help us out :)
-
